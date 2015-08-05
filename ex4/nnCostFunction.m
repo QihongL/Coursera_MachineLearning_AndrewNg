@@ -83,7 +83,7 @@ DELTA1 = 0; DELTA2 = 0;
     
 % --------------BACK PROP.--------------
     
-    for t = 1:m
+for t = 1:m
         % forward prop
         a1 = [1, X(t,:)];
         z2 = a1 * Theta1';
@@ -105,13 +105,8 @@ DELTA1 = 0; DELTA2 = 0;
     
     end
     
-
-
     Theta1_grad(:,2:end) = Theta1_grad(:,2:end) + Theta1(:,2:end) * lambda / m;
     Theta2_grad(:,2:end) = Theta2_grad(:,2:end) + Theta2(:,2:end) * lambda / m;
-
-
-
 
 % -------------------------------------------------------------
 
@@ -119,6 +114,5 @@ DELTA1 = 0; DELTA2 = 0;
 
 % Unroll gradients
 grad = [Theta1_grad(:) ; Theta2_grad(:)];
-
 
 end
